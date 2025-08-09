@@ -124,7 +124,11 @@ def interactive_mode(model, vectorizer):
     print("-" * 40)
     
     while True:
-        message = input("\nEnter message: ").strip()
+        try:
+            message = input("\nEnter message: ").strip()
+        except (EOFError, KeyboardInterrupt):
+            print("\n👋 Goodbye!")
+            break
         
         if message.lower() in ['quit', 'exit', 'q']:
             print("👋 Goodbye!")

@@ -59,11 +59,23 @@ The project uses an SMS spam dataset containing labeled messages. The dataset in
    ```
 
 3. **Download the dataset**:
-   - Place your `Spam_SMS.csv` file in the project root directory
-   - The dataset should have columns: `Class` and `Message`
-   - Alternatively, you can use the SMS Spam Collection Dataset from UCI ML Repository
+   - The notebooks include automatic dataset download functionality
+   - Alternatively, you can manually download from the UCI ML Repository
+   - If no dataset is found, sample data will be created for demonstration
 
 ## 📋 Usage
+
+### Quick Start with Demo Script
+
+```bash
+python demo_spam_detection.py
+```
+
+This will:
+- Load or create sample data
+- Train a spam detection model
+- Test on sample messages
+- Provide an interactive mode for testing
 
 ### Running the Notebooks
 
@@ -142,6 +154,8 @@ The notebooks include various visualizations:
 Spam-SMS-Detection-Using-NLP/
 ├── README.md                           # Project documentation
 ├── requirements.txt                    # Python dependencies
+├── demo_spam_detection.py              # Interactive demo script
+├── test_repository.py                  # Validation tests
 ├── Spam_Detection_NLP.ipynb           # Main transformer-based implementation
 ├── Polarity_of_Sentiments.ipynb       # Sentiment analysis implementation
 ├── logs/                              # Training logs and metrics
@@ -162,6 +176,14 @@ Spam-SMS-Detection-Using-NLP/
 - **CPU**: Multi-core processor recommended
 - **RAM**: 8GB minimum, 16GB recommended
 - **GPU**: Optional but recommended for faster training
+
+## 🧪 Testing
+
+Run the validation tests to ensure everything works:
+
+```bash
+python test_repository.py
+```
 
 ## 🤝 Contributing
 
